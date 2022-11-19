@@ -1,0 +1,7 @@
+node_modules
+build
+*.log
+.env
+svelte.config.ts
+jest.config.ts
+webpack.config.dev.ts
