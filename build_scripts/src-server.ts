@@ -1,5 +1,5 @@
 import { join } from 'path';
-import config from '../webpack.config.dev';
+import config from '../webpack.config';
 import express from 'express';
 import middleware from 'webpack-dev-middleware';
 import open from 'open';
@@ -27,8 +27,4 @@ app.get('/', (_req, res) => {
 
 app.listen(port, () => {
   open('http://localhost:' + port);
-});
-
-app.listen(port).on('error', (err) => {
-  console.log(err)
 })

@@ -1,12 +1,28 @@
 {
+  "parserOptions": {
+    "tsconfigRootDir": ".",
+    "project": ["/tsconfig.json"],
+    "extraFileExtensions": [".svelte"],
+  },
   "compilerOptions": {
-    "outDir": "./dist/",
-    "target": "ES2022",
-    "module": "commonjs",                               
+    "baseUrl": ".",
     "esModuleInterop": true,                            
-    "forceConsistentCasingInFileNames": true,      
-    "strict": true,                                     
-    "skipLibCheck": true
+    "forceConsistentCasingInFileNames": true,                    
+    "outDir": "./dist/",
+    "skipLibCheck": true,
+    "strict": true,             
+    "sourceMap": true,    
+    "noImplicitAny": true,                    
+    "target": "ES2022",
+    "isolatedModules": true,
+    "types": ["svelte"],
+    "moduleResolution": "node",
+    "paths": {
+      "@stores/*": ["src/store/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@models/*": ["src/models/*"]
+    }
   },
   "include": ["src/**/*", "build_scripts/**/*"],
   "exclude": ["node_modules"],
