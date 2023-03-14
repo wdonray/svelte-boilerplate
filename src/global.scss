@@ -1,4 +1,48 @@
+@import "~bootstrap/scss/bootstrap";
+
+$primary-text-color: #bdc1c6;
+$secondary-text-color: #999da2;
+
 body {
-  background-color: #121212;
-  color: white;
+  background-color: #202124;
+  color: $primary-text-color;
+}
+
+footer {
+  background-color: #171717;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  div {
+    &:nth-child(1) {
+      justify-content: flex-start;
+      min-width: 30%;
+      order: 1
+    }
+
+    a {
+      &:hover, &:active {
+        text-decoration: underline;
+      }
+      color: $secondary-text-color;
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  div:nth-child(2) {
+    order: 2;
+    color: $secondary-text-color;
+  }
+
+  div:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 30%;
+    order: 3;
+    color: $secondary-text-color;
+  }
 }

@@ -4,4 +4,4 @@ build
 .env
 svelte.config.ts
 jest.config.ts
-webpack.config.dev.ts
+webpack.config.ts
